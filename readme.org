@@ -110,6 +110,9 @@ refreshenv
      #+end_src
 
 3) Install packages
+   #+begin_src shell
+cd %HOMEPATH%/Desktop/ && git clone https://github.com/Ma-Nu-El/dme-lab-laptops-config.git
+   #+end_src
 
 * Refresh env
 - after installing git via choco
