@@ -98,8 +98,17 @@ choco install -y googlechrome firefox libreoffice-fresh adobereader texmaker vlc
 2) Install git
    #+begin_src shell
 choco install -y git
-refreshenv
    #+end_src
+   - =refreshenv= so you can use git within
+     the same session; this is necessary because
+     at the beginning of the script git
+     is not recognized so we have to reload
+     the environment.
+
+     #+begin_src shell
+refreshenv
+     #+end_src
+
 3) Install packages
 
 * Refresh env
