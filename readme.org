@@ -7,9 +7,9 @@
 
 * TOC :TOC_1:noexport:
 - [[#check-current-cmd-privileges][Check current cmd privileges]]
-- [[#install-package-manager-git-and-scripts][Install package manager, git and scripts]]
-- [[#install-git-and-clone-scripts][Install git and clone scripts]]
-- [[#packages][Packages]]
+- [[#1-install-package-manager][1 Install package manager]]
+- [[#2-install-git-and-clone-scripts][2 Install git and clone scripts]]
+- [[#3-packages][3 Packages]]
 
 * Check current cmd privileges
 :PROPERTIES:
@@ -35,9 +35,9 @@ goto check_Permissions
     pause >nul
 #+end_src
 
-* Install package manager, git and scripts
+* 1 Install package manager
 :PROPERTIES:
-:header-args:shell: :tangle batch-files/install-chocolatey.bat :results silent
+:header-args:shell: :tangle batch-files/install-package-manager.bat :results silent
 :END:
 
 - =Ubuntu= has =apt= (aka =apt-get=).
@@ -51,9 +51,9 @@ goto check_Permissions
 pause
 #+end_src
 
-* Install git and clone scripts
+* 2 Install git and clone scripts
 :PROPERTIES:
-:header-args:shell: :tangle batch-files/init.bat :results silent
+:header-args:shell: :tangle batch-files/install-git-and-clone-scripts.bat :results silent
 :END:
 
 #+begin_src shell
@@ -63,7 +63,7 @@ choco install -y git
 git clone https://github.com/Ma-Nu-El/dme-lab-laptops-config.git %HOMEPATH%/Desktop/
 #+end_src
 
-* Packages
+* 3 Packages
 :PROPERTIES:
 :header-args:shell: :tangle batch-files/install-packages.bat :results silent
 :END:
