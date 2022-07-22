@@ -8,7 +8,7 @@
 * TOC :TOC_1:noexport:
 - [[#check-current-cmd-privileges][Check current cmd privileges]]
 - [[#install-package-manager-and-git][Install package manager and git]]
-- [[#install-packages][Install packages]]
+- [[#packages][Packages]]
 
 * Check current cmd privileges
 :PROPERTIES:
@@ -36,7 +36,7 @@ goto check_Permissions
 
 * Install package manager and git
 :PROPERTIES:
-:header-args:shell: :tangle batch-files/install-choco-and-git.bat :results silent
+:header-args:shell: :tangle batch-files/install-chocolatey.bat :results silent
 :END:
 
 - =Ubuntu= has =apt= (aka =apt-get=).
@@ -44,27 +44,13 @@ goto check_Permissions
 - =Windows= has =chocolatey=.
   - Source: https://docs.chocolatey.org/en-us/choco/setup
 
+
 #+begin_src shell
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 pause
 #+end_src
 
-
-We use =git= to keep track of what packages are
-supposed to be installed in the machines.
-
-If there is a new package to be installed, we
-just update the list, =git fetch= the list and
-execute the file.
-
-- Source: https://docs.chocolatey.org/en-us/choco/setup
-
-#+begin_src shell
-choco install git
-pause
-#+end_src
-
-* Install packages
+* Packages
 :PROPERTIES:
 :header-args:shell: :tangle batch-files/install-packages.bat :results silent
 :END:
@@ -80,7 +66,6 @@ pause
 - RStudio
   - Requires to first install =r.project=.
 - Geogebra
-
 
 #+begin_src shell
 choco install -y googlechrome firefox libreoffice-fresh adobereader texmaker vlc winrar aimp r.project r.studio geogebra-classic.install
