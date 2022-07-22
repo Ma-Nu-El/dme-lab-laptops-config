@@ -7,7 +7,7 @@
 
 * TOC :TOC_1:noexport:
 - [[#check-current-cmd-privileges][Check current cmd privileges]]
-- [[#install-chocolatey][Install chocolatey]]
+- [[#install-package-manager][Install package manager]]
 - [[#install-git][Install git]]
 - [[#install-packages][Install packages]]
 
@@ -35,12 +35,15 @@ goto check_Permissions
     pause >nul
 #+end_src
 
-* Install chocolatey
+* Install package manager
 :PROPERTIES:
 :header-args:shell: :tangle batch-files/install-chocolatey.bat :results silent
 :END:
 
-- Source: https://docs.chocolatey.org/en-us/choco/setup
+- =Ubuntu= has =apt= (aka =apt-get=).
+- =MacOS= has =brew=.
+- =Windows= has =chocolatey=.
+  - Source: https://docs.chocolatey.org/en-us/choco/setup
 
 #+begin_src shell
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
@@ -51,6 +54,13 @@ pause
 :PROPERTIES:
 :header-args:shell: :tangle batch-files/install-git.bat :results silent
 :END:
+
+We use git to keep track of what packages are
+supposed to be installed in the machines.
+
+If there is a new package to be installed, we
+just update the list, =git fetch= the list and
+execute the file.
 
 - Source: https://docs.chocolatey.org/en-us/choco/setup
 
@@ -63,6 +73,19 @@ pause
 :PROPERTIES:
 :header-args:shell: :tangle batch-files/install-packages.bat :results silent
 :END:
+
+- Google Chrome
+- Firefox
+- Libre Office
+- Adobe reader
+- TexMaker
+- VLC
+- WinRar
+- AIMP
+- RStudio
+  - Requires to first install =r.project=.
+- Geogebra
+
 
 #+begin_src shell
 choco install -y googlechrome firefox libreoffice-fresh adobereader texmaker vlc winrar aimp r.project r.studio geogebra-classic.install
