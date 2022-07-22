@@ -1,0 +1,5 @@
+#+TITLE: Readme
+#+include: "~/org/config/author-mfuica01.org"
+#+author: \\
+#+author: Carlos Jimenez Gallardo
+#+DATE: 2022-07-22
