@@ -37,7 +37,7 @@ goto check_Permissions
 
 * Install package manager, git and scripts
 :PROPERTIES:
-:header-args:shell: :tangle batch-files/init.bat :results silent
+:header-args:shell: :tangle batch-files/install-chocolatey.bat :results silent
 :END:
 
 - =Ubuntu= has =apt= (aka =apt-get=).
