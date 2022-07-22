@@ -1,0 +1,11 @@
+# move this file to .gitignore
+.DS_Store
+*.txt
+*.tex
+*.pdf
+*.png
+*.svg
+*.jpg
+*.jpeg
+*.md
+*.html
