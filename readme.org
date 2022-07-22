@@ -7,7 +7,8 @@
 
 * TOC :TOC_1:noexport:
 - [[#check-current-cmd-privileges][Check current cmd privileges]]
-- [[#install-package-manager-and-git][Install package manager and git]]
+- [[#install-package-manager-git-and-scripts][Install package manager, git and scripts]]
+- [[#install-git-and-clone-scripts][Install git and clone scripts]]
 - [[#packages][Packages]]
 
 * Check current cmd privileges
@@ -34,9 +35,9 @@ goto check_Permissions
     pause >nul
 #+end_src
 
-* Install package manager and git
+* Install package manager, git and scripts
 :PROPERTIES:
-:header-args:shell: :tangle batch-files/install-chocolatey.bat :results silent
+:header-args:shell: :tangle batch-files/init.bat :results silent
 :END:
 
 - =Ubuntu= has =apt= (aka =apt-get=).
@@ -47,7 +48,18 @@ goto check_Permissions
 
 #+begin_src shell
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-pause
+#+end_src
+
+* Install git and clone scripts
+:PROPERTIES:
+:header-args:shell: :tangle batch-files/init.bat :results silent
+:END:
+
+#+begin_src shell
+:: Install git
+choco install -y git
+:: Install scripts
+git clone https://github.com/Ma-Nu-El/dme-lab-laptops-config.git %HOMEPATH%/Desktop/
 #+end_src
 
 * Packages
