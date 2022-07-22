@@ -65,7 +65,7 @@ git clone https://github.com/Ma-Nu-El/dme-lab-laptops-config.git %HOMEPATH%/Desk
 
 * 3 Packages
 :PROPERTIES:
-:header-args:shell: :tangle batch-files/install-packages.bat :results silent
+:header-args:shell: :tangle install-packages.bat :results silent
 :END:
 
 - Google Chrome
