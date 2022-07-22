@@ -2,8 +2,8 @@
 
 choco install -y git
 
-refreshenv
+call refreshenv
+pause
 
-cd %HOMEPATH%/Desktop/ && git clone https://github.com/Ma-Nu-El/dme-lab-laptops-config.git
-
+call cd %HOMEPATH%/Desktop/ && git clone https://github.com/Ma-Nu-El/dme-lab-laptops-config.git
 pause
