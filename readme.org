@@ -36,5 +36,34 @@ goto check_Permissions
 #+end_src
 
 * Install chocolatey
+:PROPERTIES:
+:header-args:shell: :tangle batch-files/install-chocolatey.bat :results silent
+:END:
+
+- Source: https://docs.chocolatey.org/en-us/choco/setup
+
+#+begin_src shell
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+pause
+#+end_src
+
 * Install git
+:PROPERTIES:
+:header-args:shell: :tangle batch-files/install-git.bat :results silent
+:END:
+
+- Source: https://docs.chocolatey.org/en-us/choco/setup
+
+#+begin_src shell
+choco install git
+pause
+#+end_src
+
 * Install packages
+:PROPERTIES:
+:header-args:shell: :tangle batch-files/install-packages.bat :results silent
+:END:
+
+#+begin_src shell
+choco install -y googlechrome firefox libreoffice-fresh adobereader texmaker vlc winrar aimp r.project r.studio geogebra-classic.install
+#+end_src
