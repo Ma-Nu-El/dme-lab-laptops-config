@@ -7,8 +7,7 @@
 
 * TOC :TOC_1:noexport:
 - [[#check-current-cmd-privileges][Check current cmd privileges]]
-- [[#install-package-manager][Install package manager]]
-- [[#install-git][Install git]]
+- [[#install-package-manager-and-git][Install package manager and git]]
 - [[#install-packages][Install packages]]
 
 * Check current cmd privileges
@@ -35,9 +34,9 @@ goto check_Permissions
     pause >nul
 #+end_src
 
-* Install package manager
+* Install package manager and git
 :PROPERTIES:
-:header-args:shell: :tangle batch-files/install-chocolatey.bat :results silent
+:header-args:shell: :tangle batch-files/install-choco-and-git.bat :results silent
 :END:
 
 - =Ubuntu= has =apt= (aka =apt-get=).
@@ -50,12 +49,8 @@ goto check_Permissions
 pause
 #+end_src
 
-* Install git
-:PROPERTIES:
-:header-args:shell: :tangle batch-files/install-git.bat :results silent
-:END:
 
-We use git to keep track of what packages are
+We use =git= to keep track of what packages are
 supposed to be installed in the machines.
 
 If there is a new package to be installed, we
