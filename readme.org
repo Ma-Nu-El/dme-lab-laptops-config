@@ -97,8 +97,8 @@ choco install -y googlechrome firefox libreoffice-fresh adobereader texmaker vlc
    #+end_src
 2) Install git
    #+begin_src shell
-   choco install -y git
-   refreshenv
+choco install -y git
+refreshenv
    #+end_src
 3) Install packages
 
