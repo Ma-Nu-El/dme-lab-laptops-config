@@ -1,5 +1,40 @@
 #+TITLE: Readme
+#+SUBTITLE: UFRO-DME-LAB-LAPTOP-CONFIG
 #+include: "~/org/config/author-mfuica01.org"
-#+author: \\
-#+author: Carlos Jimenez Gallardo
+#+AUTHOR: \\
+#+AUTHOR: Carlos Jiménez Gallardo
 #+DATE: 2022-07-22
+
+* TOC :TOC_1:noexport:
+- [[#check-current-cmd-privileges][Check current cmd privileges]]
+- [[#install-chocolatey][Install chocolatey]]
+- [[#install-git][Install git]]
+- [[#install-packages][Install packages]]
+
+* Check current cmd privileges
+:PROPERTIES:
+:header-args:shell: :tangle batch-files/check-current-cmd-privileges.bat :results silent
+:END:
+
+- Source: https://stackoverflow.com/questions/4051883/batch-script-how-to-check-for-admin-rights
+
+#+begin_src shell
+@echo off
+goto check_Permissions
+
+:check_Permissions
+    echo Administrative permissions required. Detecting permissions...
+
+    net session >nul 2>&1
+    if %errorLevel% == 0 (
+        echo Success: Administrative permissions confirmed.
+    ) else (
+        echo Failure: Current permissions inadequate.
+    )
+
+    pause >nul
+#+end_src
+
+* Install chocolatey
+* Install git
+* Install packages
