@@ -91,7 +91,7 @@ choco install -y googlechrome firefox libreoffice-fresh adobereader texmaker vlc
 :header-args:shell: :tangle all-in-one.bat :results silent
 :END:
 
-The =call= and =pause= are becasue
+The =call= and =pause= are because
 the script is crashing somewhere.
 
 
@@ -99,6 +99,7 @@ the script is crashing somewhere.
    #+begin_src shell
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
    #+end_src
+
 2) Install git
    #+begin_src shell
 choco install -y git
@@ -109,15 +110,10 @@ choco install -y git
      is not recognized so we have to reload
      the environment.
 
-     #+begin_src shell
-call refreshenv
-pause
-     #+end_src
-
 3) Install packages
+
    #+begin_src shell
-call cd %HOMEPATH%/Desktop/ && git clone https://github.com/Ma-Nu-El/dme-lab-laptops-config.git
-pause
+choco install -y libreoffice-still googlechrome adobereader texmaker vlc winrar aimp r.project r.studio geogebra-classic.install
    #+end_src
 
 * Refresh env

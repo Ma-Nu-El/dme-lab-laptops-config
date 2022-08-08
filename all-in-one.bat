@@ -2,8 +2,4 @@
 
 choco install -y git
 
-call refreshenv
-pause
-
-call cd %HOMEPATH%/Desktop/ && git clone https://github.com/Ma-Nu-El/dme-lab-laptops-config.git
-pause
+choco install -y libreoffice-still googlechrome adobereader texmaker vlc winrar aimp r.project r.studio geogebra-classic.install
