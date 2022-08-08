@@ -67,7 +67,7 @@ git clone https://github.com/Ma-Nu-El/dme-lab-laptops-config.git %HOMEPATH%/Desk
 
 * 3 Packages
 :PROPERTIES:
-:header-args:shell: :tangle install-packages.bat :results silent
+:header-args:shell: :tangle batch-files/install-packages.bat :results silent
 :END:
 
 - Google Chrome
@@ -88,7 +88,7 @@ choco install -y googlechrome firefox libreoffice-fresh adobereader texmaker vlc
 
 * All in one
 :PROPERTIES:
-:header-args:shell: :tangle all-in-one.bat :results silent
+:header-args:shell: :tangle batch-files/all-in-one.bat :results silent
 :END:
 
 The =call= and =pause= are because
