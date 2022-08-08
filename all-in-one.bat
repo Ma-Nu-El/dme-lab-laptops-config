@@ -2,4 +2,4 @@
 
 choco install -y git
 
-choco install -y libreoffice-still googlechrome adobereader texmaker vlc winrar aimp r.project r.studio geogebra-classic.install
+choco install -y googlechrome adobereader texmaker vlc winrar r.project r.studio geogebra-classic.install

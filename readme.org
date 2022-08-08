@@ -113,8 +113,31 @@ choco install -y git
 3) Install packages
 
    #+begin_src shell
-choco install -y libreoffice-still googlechrome adobereader texmaker vlc winrar aimp r.project r.studio geogebra-classic.install
+choco install -y googlechrome adobereader texmaker vlc winrar r.project r.studio geogebra-classic.install
    #+end_src
+
+
+- [2022-08-08 Mon 11:19]
+  - Download of =libreoffice= via =libreoffice-fresh=
+    or =libreoffice-still= doesn't work via
+    =choco install ...=: the download link
+    does indeed work, but download
+    crashes via =choco install ...=.
+    Download does work via web-browser and
+    via =wget=. However install
+    has to be manual instead of automatic.
+:    #+begin_src shell
+: choco install -y libreoffice-fresh
+:    #+end_src
+
+- [2022-08-08 Mon 11:52]
+  - Download of =aimp= via =choco= doesn't work.
+    Not even the download link. Had to
+    download installer from app website
+    and install from there.
+:    #+begin_src shell
+: choco install -y aimp
+:    #+end_src
 
 * Refresh env
 - after installing git via choco
